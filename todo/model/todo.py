@@ -3,9 +3,22 @@ class Todo:
         self.code_id:int  = code_id
         self.title:str = title
         self.description:str  = description
-        self.completed = False
+        self.completed:bool = False
         self.tags:list[str]= []
 
 
-def mark_completed(self):
-    self.completed = True
+    def mark_completed(self):
+        self.completed:bool = True
+
+
+    def add_tag(self, tag:str):
+        tags=[]
+        if tag not in tags:
+            self.tags.append(tag)
+
+    def __str__(self) -> str:
+        return f"{self.code_id} - {self.title}"
+
+
+
+class TodoBook:
